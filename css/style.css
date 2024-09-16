@@ -213,12 +213,12 @@ html {
 @media (max-width: 666px) {
     .content{
         flex-direction: column;
-        width: 535px;
     }
     .content .box-select01 {
         flex-direction: row;
-        margin: -54px;
-        width: 450px;
+        height: 100px;
+        width: 80%;
+        padding: 15px;
     }
     #small-tittle{
         text-align: left;
@@ -235,8 +235,7 @@ html {
         margin-right: -50px;
     }
     .content .box-select01:hover{
-        transform: translateY(-10px);
-        background-color: #ffffff00;
+        transform: translateY(-8px);
     }
 }
 
