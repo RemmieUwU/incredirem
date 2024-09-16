@@ -230,10 +230,6 @@ html {
     .banner{
         height: 280px;
     }
-    div#img01{
-        scale: 0.6;
-        margin-right: -50px;
-    }
     .content .box-select01:hover{
         transform: translateY(-8px);
     }
