@@ -200,8 +200,8 @@ html {
         width: 186px;
     }
     .menu-image{
-        scale: 0.65;
-        margin: -36px;
+        width: 200px;
+        height: 200px;
     }
     .news-container{
         width: 326px;
