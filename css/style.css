@@ -1,0 +1,317 @@
+:root {
+    --primary-color: #90B2ED;
+    --secondary-color: #7181cb;
+    --background-color: #16161a;
+    --background-color-trans: #16161af0;
+    --text-color: #c2c2c2;
+    --tittle-color: #ffffff;
+    --icons-color: #ffffff;
+    --selection-color: #ffffff0f;
+    --containers-color: #000000;
+    --rem-name: "Rem // レム";
+    --optional-border: #000000;
+}
+
+.hr-container {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.hr-container::before {
+    content: " • NEWS • ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+    padding: 0 10px; /* Space around the text */
+    font-size: 30px; /* Adjust font size as needed */
+    color:var(--primary-color);
+    font-family: comfortaa;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+hr{
+    height: 2px;
+    border: none;
+    background-color: var(--primary-color);
+    margin: 40px 0;
+    width: 80%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body{
+    background-color: var(--background-color);
+    margin: -8px;
+    overflow-x: hidden; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+body.lightmode{
+    --primary-color: #000000;
+    --secondary-color: #1c1c1c;
+    --background-color: #e4e4e4;
+    --background-color-trans: #e4e4e45b;
+    --text-color: #202020;
+    --tittle-color: #000000;
+    --icons-color: #000000;
+    --selection-color: #00000025;
+    --containers-color: #ffffff;
+    --optional-border: #d7d7d7;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 999;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header-container{
+    background-color: var(--background-color-trans);
+    border-radius: 50px;
+    padding: 15px;
+    box-shadow: 0px 12px 0px rgba(0, 0, 0, 0.5);
+    margin: 8px auto;
+    width: 60%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-left-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#home-button{
+    fill: var(--icons-color);
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    width: 42px;
+    height: 42px;
+    margin: 0 10px;
+}
+
+#home-button:hover{
+    transform: scale(1.1);
+}
+
+#darkmode-button{
+    fill: var(--icons-color);
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    width: 42px;
+    height: 42px;
+    margin: 0 10px;
+}
+
+#darkmode-button:hover{
+    transform: scale(1.1);
+}
+
+.banner {
+    background-image: url('../banners/website-banner.png'); /* Your image path here */
+    background-size: cover;
+    background-position: center;
+    height: 380px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 110px;
+}
+
+#small-tittle{
+    font-family: comfortaa;
+    color: var(--tittle-color);
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#normal-text{
+    font-family: comfortaa;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.content .box-select01{
+    width: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    margin: 5px;
+    transition: transform 1s cubic-bezier(0.075, 0.820, 0.165, 1.000), background-color 0.3s ease, color 0.3s ease;;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.content .box-select01:hover{
+    transform: translateY(-10px);
+    background-color: var(--selection-color)
+}
+
+.news-images{
+    max-width: 100%;
+    height: auto;    
+    display: block;
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 10px;
+    max-height: 442px;
+}
+
+@media (max-width: 963px) {
+    .content .box-select01{
+        width: 186px;
+    }
+    div#img01{
+        scale: 0.65;
+        margin: -36px;
+    }
+    .news-container{
+        width: 326px;
+        min-height: 330px;
+        max-height: 330px;
+    }
+}
+
+@media (max-width: 666px) {
+    .content{
+        flex-direction: column;
+        width: 535px;
+    }
+    .content .box-select01 {
+        flex-direction: row;
+        margin: -30px;
+        width: 450px;
+    }
+    #small-tittle{
+        text-align: left;
+    }
+    
+    #normal-text{
+        text-align: left;
+    }
+    .banner{
+        height: 280px;
+    }
+    div#img01{
+        scale: 0.6;
+        margin-right: -50px;
+    }
+    .content .box-select01:hover{
+        transform: translateY(-10px);
+        background-color: #ffffff00;
+    }
+}
+
+.news-content{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-container{
+    background-color: var(--containers-color);
+    border-radius: 10px;
+    width: 526px;
+    transition: transform 1s cubic-bezier(0.075, 0.820, 0.165, 1.000), width 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    cursor: pointer;
+    margin: 10px;
+    min-height: 530px;
+    max-height: 530px;
+    border: 2px solid var(--optional-border);
+}
+
+@media (max-width: 1119px) {
+    .news-container{
+        width: 426px;
+        min-height: 430px;
+        max-height: 430px;
+    }
+}
+
+@media (max-width: 920px) {
+    .news-container{
+        width: 326px;
+    }
+}
+
+@media (max-width: 719px){
+    .news-container {
+        width: auto;
+        min-height: 454px;
+        max-height: 602px;
+        margin-left: 24px;
+    }
+}
+
+.news-container:hover{
+    transform: translateY(-10px);
+}
+
+#news-tittle{
+    font-family: comfortaa;
+    color: var(--tittle-color);
+    margin: 5px 0;
+    font-size: 25px;
+}
+
+#news-text{
+    font-family: comfortaa;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+#rem-pfp{
+    background-image: url('../img/rem-pfp.png');
+    border-radius: 50%;
+    min-width: 58px;
+    height: 58px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 15px;
+}
+
+#rem-username::before{
+    content: var(--rem-name);
+    font-family: comfortaa;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.discord-me {
+    display: flex;
+    padding: 20px 30px;
+}
