@@ -89,6 +89,14 @@ html {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.menu-image{
+    margin: 15px;
+    border-radius: 10px;
+    width: 286px;
+    height: 286px;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
 .header-left-content {
     display: flex;
     flex-direction: row;
@@ -191,7 +199,7 @@ html {
     .content .box-select01{
         width: 186px;
     }
-    div#img01{
+    .menu-image{
         scale: 0.65;
         margin: -36px;
     }
@@ -209,7 +217,7 @@ html {
     }
     .content .box-select01 {
         flex-direction: row;
-        margin: -30px;
+        margin: -54px;
         width: 450px;
     }
     #small-tittle{
