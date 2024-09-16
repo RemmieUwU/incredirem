@@ -23,3 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.getElementById('open-channel').addEventListener('click',function(){
+    window.open('https://www.youtube.com/@rin.Incredibox', '_blank');
+});
