@@ -44,8 +44,9 @@ async function loadNews() {
 }
 
 function displayNews(news) {
-    const newsContainer = document.querySelector('.news-container');
-
+    const newsContent = document.querySelector('.news-content');
+    const newsContainer = document.createElement('div');
+    newsContainer.classList.add('news-container');
     const newsBox = `
         <div class="discord-me">
             <div id="rem-pfp"></div>
@@ -57,10 +58,9 @@ function displayNews(news) {
             </div>
         </div>
     `;
-    
-    newsContainer.innerHTML += newsBox;
+
+    newsContainer.innerHTML = newsBox;
+
+    newsContent.appendChild(newsContainer);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadNews();  // Call loadNews once DOM is ready
-});
