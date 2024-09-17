@@ -223,7 +223,10 @@ html {
     #small-tittle{
         text-align: left;
     }
-    
+    .menu-image{
+        width: 123px;
+        height: 123px;
+    }
     #normal-text{
         text-align: left;
     }
