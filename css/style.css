@@ -18,6 +18,11 @@
     -webkit-tap-highlight-color: #ffffff00;
 }
 
+html, body {
+    max-width: 101%;
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
   }
@@ -234,16 +239,15 @@ html {
 }
 
 .banner {
-    background-image: url('../banners/website-banner.png'); /* Your image path here */
+    background-image: url('../banners/website-banner.png');
     background-size: cover;
     background-position: center;
-    height: 380px; /* Adjust height as needed */
+    height: 380px; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
-    border-radius: 10px;
     margin-top: 110px;
 }
 
